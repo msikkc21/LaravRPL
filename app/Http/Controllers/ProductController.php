@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     public function index(){
         $products = Product::all();
-        return view('products.index', compact('products'));
+        $expensiveProducts = Product::expensive(400)->get();
+        $averagePrice = Product::averagePrice();
+        return view('products.index', compact('products', 'expensiveProducts', 'averagePrice'));
     }
 
     public function show($id){

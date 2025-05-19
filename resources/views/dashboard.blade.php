@@ -26,8 +26,12 @@
                 List Products
             </a>
             <a href="{{ url('/chatbot') }}"
-                class="bg-blue-500 w-full h-20 rounded-lg font-semibold text-white flex justify-center items-center text-2xl hover:bg-blue-400 transition-all duration-200">
+                class="bg-yellow-500 w-full h-20 rounded-lg font-semibold text-white flex justify-center items-center text-2xl hover:bg-yellow-400 transition-all duration-200">
                 AI Chatbot
+            </a>
+            <a href="{{ url('/react') }}"
+                class="bg-green-500 w-full h-20 rounded-lg font-semibold text-white flex justify-center items-center text-2xl hover:bg-green-400 transition-all duration-200">
+                React Demo
             </a>
         </div>
     </section>
